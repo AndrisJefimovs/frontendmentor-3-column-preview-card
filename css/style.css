@@ -1,0 +1,118 @@
+:root {
+  --heading-typeface: 'Big Shoulders Display', cursive;
+  --text-typeface: 'Lexend Deca', sans-serif;
+  --heading-size: 2.5rem;
+  --text-size: 0.9375rem;
+  --neutral-100: hsla(0, 0%, 100%, 0.75);
+  --neutral-200: hsl(0, 0%, 95%);
+  --primary-color-1: hsl(31, 77%, 52%);
+  --primary-color-2: hsl(184, 100%, 22%);
+  --primary-color-3: hsl(179, 100%, 13%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--neutral-200);
+  display: grid;
+  font-family: var(--text-typeface);
+  margin-top: 5.5rem;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - 48px);
+  overflow: hidden;
+}
+
+.card__inner {
+  padding: 3rem;
+}
+
+.card__inner:nth-child(1) {
+  background-color: var(--primary-color-1);
+  color: var(--primary-color-1);
+}
+
+.card__inner:nth-child(2) {
+  background-color: var(--primary-color-2);
+  color: var(--primary-color-2);
+}
+
+.card__inner:nth-child(3) {
+  background-color: var(--primary-color-3);
+  color: var(--primary-color-3);
+}
+
+.card__icon {
+  height: 40px;
+  width: 64px;
+}
+
+.card__inner:nth-child(1) .card__icon {
+  background: center / contain no-repeat url('../images/icon-sedans.svg');
+}
+
+.card__inner:nth-child(2) .card__icon {
+  background: center / contain no-repeat url('../images/icon-suvs.svg');
+}
+
+.card__inner:nth-child(3) .card__icon {
+  background: center / contain no-repeat url('../images/icon-luxury.svg');
+}
+
+.card__headline {
+  color: var(--neutral-200);
+  font-family: var(--heading-typeface);
+  font-size: var(--heading-size);
+  line-height: 1;
+  margin: 2.5rem 0 1.75rem;
+  text-transform: uppercase;
+}
+
+.card__description {
+  color: var(--neutral-100);
+  font-size: var(--text-size);
+  letter-spacing: 0.015em;
+  line-height: 1.7;
+  margin: 0 0 1.8em;
+}
+
+.card__link {
+  background-color: var(--neutral-200);
+  border-radius: 100vw;
+  border: 0.2rem solid var(--neutral-200);
+  color: inherit;
+  display: inline-block;
+  font-size: var(--neutral-200);
+  line-height: 1;
+  padding: 0.9em 2em;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  background-color: transparent;
+  color: var(--neutral-200);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 57.5rem;
+    max-width: min(57.5rem, calc(100vw - 48px));
+  }
+  .card__inner {
+    flex: 1 1 33.33333%;
+  }
+  .card__description {
+    margin: 0 0 5.5em;
+  }
+}
