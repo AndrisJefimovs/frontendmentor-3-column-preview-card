@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://andrisjefimovs.github.io/frontendmentor-3-column-preview-card)
+- Live Site URL: [GitHub Pages](https://andrisjefimovs.github.io/frontendmentor-3-column-preview-card)
 
 ## My process
 
